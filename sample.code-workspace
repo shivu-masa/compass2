@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../xampp/htdocs/ServerSideCurriculum/PHP_BASE01/sample"
+		},
+		{
+			"path": "../../../xampp/htdocs/ServerSideCurriculum"
+		},
+		{
+			"path": "../Laravel_CRUD/Laravel"
+		},
+		{
+			"path": "../Desktop/test/.git"
+		},
+		{
+			"path": "../AtlasSNS__shibuya_masaki"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontSize": 15
+	}
+}
