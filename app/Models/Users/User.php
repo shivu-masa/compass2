@@ -78,4 +78,9 @@ class User extends Authenticatable
     public function likePostId(){
         return Like::where('like_user_id', Auth::id());
     }
+    public function getAuthIdentifierName()
+    {
+        return 'mail_address';
+    }
+
 }

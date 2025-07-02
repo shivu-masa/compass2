@@ -69,7 +69,6 @@ class RegisteredUserController extends Controller
         'password.min' => 'パスワードは8文字以上で入力してください。',
     ]);
 
-    DB::beginTransaction();
     try {
         $birth_day = "{$request->old_year}-{$request->old_month}-{$request->old_day}";
 
