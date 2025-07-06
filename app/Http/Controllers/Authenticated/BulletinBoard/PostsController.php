@@ -49,6 +49,7 @@ class PostsController extends Controller
     }
 
     public function postCreate(PostFormRequest $request){
+
         $post = Post::create([
             'user_id' => Auth::id(),
             'post_title' => $request->post_title,

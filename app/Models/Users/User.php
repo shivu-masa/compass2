@@ -67,7 +67,7 @@ class User extends Authenticatable
     }
 
     public function subjects(){
-        return $this->belongsToMany(Subjects::class, 'subject_user', 'user_id', 'subject_id');
+        return $this->belongsToMany(Subjects::class, 'subject_users', 'user_id', 'subject_id');
     }
 
     // いいねしているかどうか
@@ -77,10 +77,6 @@ class User extends Authenticatable
 
     public function likePostId(){
         return Like::where('like_user_id', Auth::id());
-    }
-    public function getAuthIdentifierName()
-    {
-        return 'mail_address';
     }
 
 }

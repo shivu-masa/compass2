@@ -68,10 +68,9 @@ class RegisteredUserController extends Controller
         'password.confirmed' => '確認用パスワードと一致しません。',
         'password.min' => 'パスワードは8文字以上で入力してください。',
     ]);
+    DB::beginTransaction();
 
     try {
-        $birth_day = "{$request->old_year}-{$request->old_month}-{$request->old_day}";
-
         $user = User::create([
             'over_name' => $request->over_name,
             'under_name' => $request->under_name,
@@ -79,21 +78,23 @@ class RegisteredUserController extends Controller
             'under_name_kana' => $request->under_name_kana,
             'mail_address' => $request->mail_address,
             'sex' => $request->sex,
-            'birth_day' => $birth_day,
+            'birth_day' => "{$request->old_year}-{$request->old_month}-{$request->old_day}",
             'role' => $request->role,
             'password' => bcrypt($request->password),
         ]);
 
-        if ($request->role == 4 && $request->subject) {
-            $user->subjects()->attach($request->subject);
+        if ($request->role == 4 && $request->has('subject')) {
+            $subjectIds = array_map('intval', (array) $request->subject);
+            $user->subjects()->attach($subjectIds);
         }
 
         DB::commit();
+
         return redirect()->route('loginView')->with('success', '登録が完了しました。ログインしてください。');
 
     } catch (\Exception $e) {
         DB::rollback();
         return redirect()->back()->withErrors(['error' => '登録に失敗しました。'])->withInput();
     }
-    }
+}
 }
