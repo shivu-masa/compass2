@@ -7,11 +7,23 @@
           <div>
           </div>
           <div>
+
+          @if(Auth::id() === $post->user_id)
             <span class="edit-modal-open" post_title="{{ $post->post_title }}" post_body="{{ $post->post }}" post_id="{{ $post->id }}">編集</span>
-            <a href="{{ route('post.delete', ['id' => $post->id]) }}">削除</a>
+            @endif
+            @if(Auth::id() === $post->user_id)
+            <a href="#" class="delete-modal-open" data-post-id="{{ $post->id }}">削除</a>
+            @endif
           </div>
         </div>
-
+        <div class="w-100 mb-2">
+    @if ($errors->has('post_title'))
+      <div class="text-danger">{{ $errors->first('post_title') }}</div>
+    @endif
+    @if ($errors->has('post_body'))
+      <div class="text-danger">{{ $errors->first('post_body') }}</div>
+    @endif
+  </div>
         <div class="contributor d-flex">
           <p>
             <span>{{ $post->user->over_name }}</span>
@@ -51,10 +63,12 @@
     </div>
   </div>
 </div>
+{{-- 編集モーダル --}}
 <div class="modal js-modal">
   <div class="modal__bg js-modal-close"></div>
   <div class="modal__content">
     <form action="{{ route('post.edit') }}" method="post">
+      {{ csrf_field() }}
       <div class="w-100">
         <div class="modal-inner-title w-50 m-auto">
           <input type="text" name="post_title" placeholder="タイトル" class="w-100">
@@ -68,7 +82,23 @@
           <input type="submit" class="btn btn-primary d-block" value="編集">
         </div>
       </div>
-      {{ csrf_field() }}
+    </form>
+  </div>
+</div>
+
+{{-- ✅削除モーダル：別に独立 --}}
+<div class="modal delete-modal js-delete-modal" style="display: none;">
+  <div class="modal__bg js-delete-modal-close"></div>
+  <div class="modal__content">
+    <form id="delete-form" method="POST">
+      @csrf
+      @method('DELETE')
+      <p class="text-center">この投稿を削除してもよろしいですか？</p>
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-secondary js-delete-modal-close mx-2" href="#">キャンセル</a>
+        <button type="submit" class="btn btn-danger mx-2">OK
+        </button>
+      </div>
     </form>
   </div>
 </div>

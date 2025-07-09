@@ -48,7 +48,7 @@ $(function () {
     });
   });
 
-  $('.edit-modal-open').on('click',function(){
+  $('.edit-modal-open').on('click', function () {
     $('.js-modal').fadeIn();
     var post_title = $(this).attr('post_title');
     var post_body = $(this).attr('post_body');
@@ -58,9 +58,22 @@ $(function () {
     $('.edit-modal-hidden').val(post_id);
     return false;
   });
+
   $('.js-modal-close').on('click', function () {
     $('.js-modal').fadeOut();
     return false;
   });
 
+  $(document).on('click', '.delete-modal-open', function (e) {
+    e.preventDefault(); // 追加
+    var post_id = $(this).data('post-id');
+    $('#delete-form').attr('action', '/post/delete/' + post_id); // ルート名に合わせて修正
+    $('.js-delete-modal').fadeIn();
+  });
+
+  // 削除モーダルを閉じる
+  $(document).on('click', '.js-delete-modal-close', function () {
+    $('.js-delete-modal').fadeOut();
+    return false;
+  });
 });

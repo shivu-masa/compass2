@@ -59,6 +59,7 @@ class PostsController extends Controller
     }
 
     public function postEdit(Request $request){
+
         $request->validate([
             'post_title' => ['required', 'string', 'max:100'],
             'post_body' => ['required', 'string', 'max:2000'],
