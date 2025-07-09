@@ -65,9 +65,12 @@ $(function () {
   });
 
   $(document).on('click', '.delete-modal-open', function (e) {
-    e.preventDefault(); // 追加
+    e.preventDefault();
     var post_id = $(this).data('post-id');
-    $('#delete-form').attr('action', '/post/delete/' + post_id); // ルート名に合わせて修正
+
+    // 正しいルートパスに修正
+    $('#delete-form').attr('action', '/bulletin_board/delete/' + post_id);
+
     $('.js-delete-modal').fadeIn();
   });
 

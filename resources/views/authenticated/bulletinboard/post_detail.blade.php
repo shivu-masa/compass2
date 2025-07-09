@@ -90,7 +90,7 @@
 <div class="modal delete-modal js-delete-modal" style="display: none;">
   <div class="modal__bg js-delete-modal-close"></div>
   <div class="modal__content">
-    <form id="delete-form" method="POST">
+  <form id="delete-form" method="POST" action="">
       @csrf
       @method('DELETE')
       <p class="text-center">この投稿を削除してもよろしいですか？</p>
