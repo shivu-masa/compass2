@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use DB;
-
+use Illuminate\Validation\Rule;
 use App\Models\Users\Subjects;
 use App\Models\Users\User;
 
@@ -40,34 +40,23 @@ class RegisteredUserController extends Controller
 
     // tryの外でバリデーション
     $request->validate([
-        'over_name' => 'required',
-        'under_name' => 'required',
-        'over_name_kana' => 'required',
-        'under_name_kana' => 'required',
-        'mail_address' => 'required|email|unique:users,mail_address',
-        'sex' => 'required',
-        'old_year' => 'required',
-        'old_month' => 'required',
-        'old_day' => 'required',
-        'role' => 'required',
-        'password' => 'required|confirmed|min:8',
-    ], [
-        'over_name.required' => '姓は必須項目です。',
-        'under_name.required' => '名は必須項目です。',
-        'over_name_kana.required' => 'セイは必須項目です。',
-        'under_name_kana.required' => 'メイは必須項目です。',
-        'mail_address.required' => 'メールアドレスは必須項目です。',
-        'mail_address.email' => '有効なメールアドレス形式で入力してください。',
-        'mail_address.unique' => 'そのメールアドレスは既に登録されています。',
-        'sex.required' => '性別を選択してください。',
-        'old_year.required' => '生年月日の「年」を選択してください。',
-        'old_month.required' => '生年月日の「月」を選択してください。',
-        'old_day.required' => '生年月日の「日」を選択してください。',
-        'role.required' => '役職を選択してください。',
-        'password.required' => 'パスワードは必須項目です。',
-        'password.confirmed' => '確認用パスワードと一致しません。',
-        'password.min' => 'パスワードは8文字以上で入力してください。',
+        'over_name' => ['required', 'string', 'max:10'],
+        'under_name' => ['required', 'string', 'max:10'],
+        'over_name_kana' => ['required', 'string', 'max:30', 'regex:/^[ァ-ヶー　]+$/u'],
+        'under_name_kana' => ['required', 'string', 'max:30', 'regex:/^[ァ-ヶー　]+$/u'],
+        'mail_address' => ['required', 'email', 'max:100', 'unique:users,mail_address'],
+        'sex' => ['required', Rule::in([1, 2, 3])], // 1:男性, 2:女性, 3:その他
+        'old_year' => ['required', 'integer'],
+        'old_month' => ['required', 'integer'],
+        'old_day' => ['required', 'integer'],
+        'role' => ['required', Rule::in([1, 2, 3, 4])], // 1:国語, 2:数学, 3:英語, 4:生徒
+        'password' => ['required', 'confirmed', 'min:8', 'max:30'],
     ]);
+    if (!checkdate((int)$request->old_month, (int)$request->old_day, (int)$request->old_year)) {
+        return back()->withErrors(['birth_day' => '存在しない日付です。'])->withInput();
+    }
+
+
     DB::beginTransaction();
 
     try {

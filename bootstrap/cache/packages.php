@@ -10,6 +10,20 @@
       0 => 'Barryvdh\\Debugbar\\ServiceProvider',
     ),
   ),
+  'laravel-lang/lang' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaravelLang\\Lang\\ServiceProvider',
+    ),
+  ),
+  'laravel-lang/publisher' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaravelLang\\Publisher\\ServiceProvider',
+    ),
+  ),
   'laravel/breeze' => 
   array (
     'providers' => 
