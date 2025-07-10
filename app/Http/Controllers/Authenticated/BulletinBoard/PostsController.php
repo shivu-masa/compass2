@@ -16,25 +16,38 @@ use Auth;
 class PostsController extends Controller
 {
     public function show(Request $request){
-        $posts = Post::with('user', 'postComments')->get();
         $categories = MainCategory::get();
         $like = new Like;
         $post_comment = new Post;
+
         if(!empty($request->keyword)){
             $posts = Post::with('user', 'postComments')
-            ->where('post_title', 'like', '%'.$request->keyword.'%')
-            ->orWhere('post', 'like', '%'.$request->keyword.'%')->get();
-        }else if($request->category_word){
+                ->withCount(['likes', 'postComments']) // ★コメント数といいね数
+                ->where('post_title', 'like', '%'.$request->keyword.'%')
+                ->orWhere('post', 'like', '%'.$request->keyword.'%')
+                ->get();
+        } else if($request->category_word){
             $sub_category = $request->category_word;
-            $posts = Post::with('user', 'postComments')->get();
-        }else if($request->like_posts){
+            $posts = Post::with('user', 'postComments')
+                ->withCount(['likes', 'postComments']) // ★
+                ->get();
+        } else if($request->like_posts){
             $likes = Auth::user()->likePostId()->get('like_post_id');
             $posts = Post::with('user', 'postComments')
-            ->whereIn('id', $likes)->get();
-        }else if($request->my_posts){
+                ->withCount(['likes', 'postComments']) // ★
+                ->whereIn('id', $likes)
+                ->get();
+        } else if($request->my_posts){
             $posts = Post::with('user', 'postComments')
-            ->where('user_id', Auth::id())->get();
+                ->withCount(['likes', 'postComments']) // ★
+                ->where('user_id', Auth::id())
+                ->get();
+        } else {
+            $posts = Post::with('user', 'postComments')
+                ->withCount(['likes', 'postComments']) // ★
+                ->get();
         }
+
         return view('authenticated.bulletinboard.posts', compact('posts', 'categories', 'like', 'post_comment'));
     }
 
@@ -83,6 +96,9 @@ class PostsController extends Controller
     }
 
     public function commentCreate(Request $request){
+        $request->validate([
+            'comment' => ['required', 'string', 'max:250'],
+        ]);
         PostComment::create([
             'post_id' => $request->post_id,
             'user_id' => Auth::id(),
@@ -92,15 +108,14 @@ class PostsController extends Controller
     }
 
     public function myBulletinBoard(){
-        $posts = Auth::user()->posts()->get();
+        $posts = Auth::user()->posts()->withCount('likes')->get();
         $like = new Like;
         return view('authenticated.bulletinboard.post_myself', compact('posts', 'like'));
     }
 
     public function likeBulletinBoard(){
         $like_post_id = Like::with('users')->where('like_user_id', Auth::id())->get('like_post_id')->toArray();
-        $posts = Post::with('user')->whereIn('id', $like_post_id)->get();
-        $like = new Like;
+        $posts = Post::with('user')->withCount('likes')->whereIn('id', $like_post_id)->get();
         return view('authenticated.bulletinboard.post_like', compact('posts', 'like'));
     }
 
