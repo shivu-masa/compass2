@@ -11,63 +11,66 @@ use App\Models\Posts\PostComment;
 use App\Models\Posts\Like;
 use App\Models\Users\User;
 use App\Http\Requests\BulletinBoard\PostFormRequest;
+use App\Http\Requests\MainCategoryRequest;
+use App\Http\Requests\SubCategoryRequest;
+
 use Auth;
 
 class PostsController extends Controller
 {
-    public function show(Request $request){
-        $categories = MainCategory::get();
-        $like = new Like;
-        $post_comment = new Post;
+    public function show(Request $request)
+    {
+        $categories = MainCategory::with('subCategories')->get();
+  $keyword = $request->keyword;
 
-        if(!empty($request->keyword)){
-            $posts = Post::with('user', 'postComments')
-                ->withCount(['likes', 'postComments']) // ★コメント数といいね数
-                ->where('post_title', 'like', '%'.$request->keyword.'%')
-                ->orWhere('post', 'like', '%'.$request->keyword.'%')
-                ->get();
-        } else if($request->category_word){
-            $sub_category = $request->category_word;
-            $posts = Post::with('user', 'postComments')
-                ->withCount(['likes', 'postComments']) // ★
-                ->get();
-        } else if($request->like_posts){
-            $likes = Auth::user()->likePostId()->get('like_post_id');
-            $posts = Post::with('user', 'postComments')
-                ->withCount(['likes', 'postComments']) // ★
-                ->whereIn('id', $likes)
-                ->get();
-        } else if($request->my_posts){
-            $posts = Post::with('user', 'postComments')
-                ->withCount(['likes', 'postComments']) // ★
-                ->where('user_id', Auth::id())
-                ->get();
-        } else {
-            $posts = Post::with('user', 'postComments')
-                ->withCount(['likes', 'postComments']) // ★
-                ->get();
-        }
+        if ($request->has('sub_category_id')) {
+            $posts = Post::with(['user', 'postComments'])
+                ->withCount(['likes', 'postComments'])
+                ->whereHas('subCategories', function ($query) use ($request) {
+                    $query->where('sub_category_id', $request->sub_category_id);
+                })->get();
 
-        return view('authenticated.bulletinboard.posts', compact('posts', 'categories', 'like', 'post_comment'));
+    } elseif ($keyword) {
+        $posts = Post::with(['user', 'postComments'])
+            ->withCount(['likes', 'postComments'])
+            ->where('post_title', 'like', '%' . $keyword . '%')
+            ->orWhere('post', 'like', '%' . $keyword . '%')
+            ->get();
+    } else {
+        $posts = Post::with(['user', 'postComments'])
+            ->withCount(['likes', 'postComments'])
+            ->get();
     }
 
+    $categories = MainCategory::with('subCategories')->get();
+    $like = new Like;
+    $post_comment = new Post;
+
+    return view('authenticated.bulletinboard.posts', compact('posts', 'categories', 'like', 'post_comment'));
+}
     public function postDetail($post_id){
         $post = Post::with('user', 'postComments')->findOrFail($post_id);
         return view('authenticated.bulletinboard.post_detail', compact('post'));
     }
 
     public function postInput(){
-        $main_categories = MainCategory::get();
+         $main_categories = MainCategory::with('subCategories')->get();
+
         return view('authenticated.bulletinboard.post_create', compact('main_categories'));
     }
 
     public function postCreate(PostFormRequest $request){
 
-        $post = Post::create([
-            'user_id' => Auth::id(),
-            'post_title' => $request->post_title,
-            'post' => $request->post_body
-        ]);
+      $post = Post::create([
+    'user_id' => Auth::id(),
+    'post_title' => $request->post_title,
+    'post' => $request->post_body,
+]);
+
+// 例えばサブカテゴリーは単数選択なら
+if ($request->has('sub_category_id')) {
+    $post->subCategories()->attach($request->sub_category_id);
+}
         return redirect()->route('post.show');
     }
 
@@ -90,11 +93,25 @@ class PostsController extends Controller
         Post::findOrFail($id)->delete();
         return redirect()->route('post.show');
     }
-    public function mainCategoryCreate(Request $request){
+    public function mainCategoryCreate(MainCategoryRequest $request){
+        $request->validate([
+        'main_category_name' => 'required|string|max:50'
+    ]);
         MainCategory::create(['main_category' => $request->main_category_name]);
-        return redirect()->route('post.input');
     }
+public function subCategoryCreate(SubCategoryRequest $request){
+    $request->validate([
+        'main_category_id' => 'required|exists:main_categories,id',
+        'sub_category_name' => 'required|string|max:50'
+    ]);
 
+    SubCategory::create([
+        'main_category_id' => $request->main_category_id,
+        'sub_category' => $request->sub_category_name
+    ]);
+
+    return redirect()->route('post.input');
+}
     public function commentCreate(Request $request){
         $request->validate([
             'comment' => ['required', 'string', 'max:250'],

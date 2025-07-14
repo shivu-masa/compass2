@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
+use Carbon\Carbon;
 
 class UserRegisterRequest extends FormRequest
 {
@@ -43,5 +44,27 @@ class UserRegisterRequest extends FormRequest
             'role' => '役割',
             'password' => 'パスワード',
         ];
+    }
+     public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            $year = $this->input('old_year');
+            $month = $this->input('old_month');
+            $day = $this->input('old_day');
+
+             if (!checkdate($month, $day, $year)) {
+                $validator->errors()->add('birth_day', '存在しない日付です。');
+                return;
+            }
+
+            // 日付オブジェクトを作成
+            $birthDate = Carbon::createFromDate($year, $month, $day);
+            $minDate = Carbon::create(2000, 1, 1);
+            $today = Carbon::today();
+
+            if ($birthDate->lt($minDate) || $birthDate->gt($today)) {
+                $validator->errors()->add('birth_day', '生年月日は2000年1月1日から今日までの間で入力してください。');
+            }
+        });
     }
 }

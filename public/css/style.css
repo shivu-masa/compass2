@@ -277,3 +277,13 @@ li {
 .subject_inner {
   display: none;
 }
+
+li.main-category {
+  color: gray;
+  font-weight: bold;
+}
+
+li.sub-category {
+  color: black;
+  margin-left: 1em;
+}
