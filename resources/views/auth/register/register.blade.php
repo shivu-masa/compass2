@@ -75,15 +75,11 @@
         </div>
 
         <div class="mt-3">
-        @error('old_year')
-  <div class="text-danger" style="font-size:12px;">{{ $message }}</div>
-@enderror
-@error('old_month')
-  <div class="text-danger" style="font-size:12px;">{{ $message }}</div>
-@enderror
-@error('old_day')
-  <div class="text-danger" style="font-size:12px;">{{ $message }}</div>
-@enderror
+     @if ($errors->has('birth_day'))
+  @foreach ($errors->get('birth_day') as $message)
+    <div class="text-danger" style="font-size:12px;">{{ $message }}</div>
+  @endforeach
+@endif
           <label class="d-block m-0 aa" style="font-size:13px">生年月日</label>
           <select class="old_year" name="old_year">
             <option value="none">-----</option>

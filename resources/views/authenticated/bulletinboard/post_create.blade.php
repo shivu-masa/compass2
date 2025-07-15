@@ -55,19 +55,23 @@
       <input type="submit" value="追加" class="w-100 btn btn-primary p-0">
     </form>
   </div>
-     {{-- サブカテゴリー追加 --}}
-  <div class="mt-4">
-    @if ($errors->has('sub_category_name'))
-  <p class="text-danger">{{ $errors->first('sub_category_name') }}</p>
-@endif
-    <p class="m-0">サブカテゴリー</p>
-    <form action="{{ route('sub.category.create') }}" method="POST">
-        @csrf
-        <input type="hidden" name="main_category_id" value="{{ $main_category->id }}">
-        <input type="text" name="sub_category_name" class="form-control mb-1" placeholder="サブカテゴリー名を入力">
-        <input type="submit" value="追加" class="w-100 btn btn-primary p-0 mt-1">
-      </form>
-  </div>
+   <div class="mt-4">
+  <p class="m-0">サブカテゴリーを追加</p>
+  @if ($errors->has('sub_category_name'))
+    <p class="text-danger">{{ $errors->first('sub_category_name') }}</p>
+  @endif
+  <form action="{{ route('sub.category.create') }}" method="POST">
+    @csrf
+    <select name="main_category_id" class="form-control mb-1" required>
+      <option value="">メインカテゴリーを選択してください</option>
+      @foreach($main_categories as $main_category)
+        <option value="{{ $main_category->id }}">{{ $main_category->main_category }}</option>
+      @endforeach
+    </select>
+    <input type="text" name="sub_category_name" class="form-control mb-1" placeholder="サブカテゴリー名を入力" required>
+    <input type="submit" value="追加" class="w-100 btn btn-primary p-0 mt-1">
+  </form>
+</div>
   @endcan
 </div>
 </x-sidebar>

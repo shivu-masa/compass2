@@ -93,12 +93,24 @@ if ($request->has('sub_category_id')) {
         Post::findOrFail($id)->delete();
         return redirect()->route('post.show');
     }
+
     public function mainCategoryCreate(MainCategoryRequest $request){
         $request->validate([
         'main_category_name' => 'required|string|max:50'
     ]);
-        MainCategory::create(['main_category' => $request->main_category_name]);
+        MainCategory::create(['main_category' => $request->main_category_name
+    ]);
+         return redirect()->route('post.input');
     }
+    public function showPostInput()
+{
+    dd(MainCategory::with('subCategories')->get());
+    $main_categories = MainCategory::with('subCategories')->get();
+
+    return view('post.input', compact('main_categories'));
+}
+
+
 public function subCategoryCreate(SubCategoryRequest $request){
     $request->validate([
         'main_category_id' => 'required|exists:main_categories,id',
@@ -109,7 +121,6 @@ public function subCategoryCreate(SubCategoryRequest $request){
         'main_category_id' => $request->main_category_id,
         'sub_category' => $request->sub_category_name
     ]);
-
     return redirect()->route('post.input');
 }
     public function commentCreate(Request $request){

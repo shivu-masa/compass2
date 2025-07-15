@@ -21,9 +21,9 @@ class UserRegisterRequest extends FormRequest
             'under_name_kana' => ['required', 'string', 'max:30', 'regex:/^[ァ-ヶー　]+$/u'],
             'mail_address' => ['required', 'email', 'max:100', 'unique:users,mail_address'],
             'sex' => ['required', Rule::in([1, 2, 3])],
-            'old_year' => ['required', 'integer'],
-            'old_month' => ['required', 'integer'],
-            'old_day' => ['required', 'integer'],
+            'old_year' => ['required'],
+            'old_month' => ['required'],
+            'old_day' => ['required'],
             'role' => ['required', Rule::in([1, 2, 3, 4])],
             'password' => ['required', 'confirmed', 'min:8', 'max:30'],
         ];
@@ -45,26 +45,29 @@ class UserRegisterRequest extends FormRequest
             'password' => 'パスワード',
         ];
     }
-     public function withValidator($validator)
-    {
-        $validator->after(function ($validator) {
-            $year = $this->input('old_year');
-            $month = $this->input('old_month');
-            $day = $this->input('old_day');
 
-             if (!checkdate($month, $day, $year)) {
-                $validator->errors()->add('birth_day', '存在しない日付です。');
-                return;
-            }
+    public function withValidator($validator)
+{
+    $validator->after(function ($validator) {
+        $year = (int) $this->input('old_year');
+        $month = (int) $this->input('old_month');
+        $day = (int) $this->input('old_day');
 
-            // 日付オブジェクトを作成
-            $birthDate = Carbon::createFromDate($year, $month, $day);
-            $minDate = Carbon::create(2000, 1, 1);
-            $today = Carbon::today();
+        // 正しい日付でない場合（例：2/31や6/31など）
+        if (!checkdate($month, $day, $year)) {
+            $validator->errors()->add('birth_day', '存在しない日付です。');
+            return;
+        }
 
-            if ($birthDate->lt($minDate) || $birthDate->gt($today)) {
-                $validator->errors()->add('birth_day', '生年月日は2000年1月1日から今日までの間で入力してください。');
-            }
-        });
-    }
+        // 日付の範囲制限（2000年1月1日～今日まで）
+        $birthDate = Carbon::createFromDate($year, $month, $day);
+        $minDate = Carbon::create(2000, 1, 1);
+        $today = Carbon::today();
+
+        if ($birthDate->lt($minDate) || $birthDate->gt($today)) {
+            $validator->errors()->add('birth_day', '生年月日は2000年1月1日から今日までの間で入力してください。');
+        }
+    });
+
+}
 }

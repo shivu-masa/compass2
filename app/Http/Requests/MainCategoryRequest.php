@@ -29,4 +29,6 @@ class MainCategoryRequest extends FormRequest
             'main_category_name' => 'メインカテゴリー名',
         ];
     }
+
+
 }
