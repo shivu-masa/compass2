@@ -3,7 +3,7 @@
   <div class="post_create_area border w-50 m-5 p-5">
     <div class="">
       <p class="mb-0">カテゴリー</p>
-<select class="w-100" form="postCreate" name="post_category_id" required>
+<select class="w-100" form="postCreate" name="sub_category_id" required>
   @foreach($main_categories as $main_category)
     {{-- メインカテゴリー（選択不可・グレー表示） --}}
     <optgroup label="{{ $main_category->main_category }}" style="color: gray;">

@@ -18,26 +18,26 @@ use Auth;
 
 class PostsController extends Controller
 {
-    public function show(Request $request)
-    {
-        $categories = MainCategory::with('subCategories')->get();
-  $keyword = $request->keyword;
+   public function show(Request $request)
+{
+    $categories = MainCategory::with('subCategories')->get();
+    $keyword = $request->keyword;
 
-        if ($request->has('sub_category_id')) {
-            $posts = Post::with(['user', 'postComments'])
-                ->withCount(['likes', 'postComments'])
-                ->whereHas('subCategories', function ($query) use ($request) {
-                    $query->where('sub_category_id', $request->sub_category_id);
-                })->get();
+    if ($request->has('sub_category_id')) {
+        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
+            ->withCount(['likes', 'postComments'])
+            ->whereHas('subCategories', function ($query) use ($request) {
+                $query->where('sub_category_id', $request->sub_category_id);
+            })->get();
 
     } elseif ($keyword) {
-        $posts = Post::with(['user', 'postComments'])
+        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
             ->withCount(['likes', 'postComments'])
             ->where('post_title', 'like', '%' . $keyword . '%')
             ->orWhere('post', 'like', '%' . $keyword . '%')
             ->get();
     } else {
-        $posts = Post::with(['user', 'postComments'])
+        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
             ->withCount(['likes', 'postComments'])
             ->get();
     }
@@ -48,6 +48,7 @@ class PostsController extends Controller
 
     return view('authenticated.bulletinboard.posts', compact('posts', 'categories', 'like', 'post_comment'));
 }
+
     public function postDetail($post_id){
         $post = Post::with('user', 'postComments')->findOrFail($post_id);
         return view('authenticated.bulletinboard.post_detail', compact('post'));
@@ -61,18 +62,17 @@ class PostsController extends Controller
 
     public function postCreate(PostFormRequest $request){
 
-      $post = Post::create([
-    'user_id' => Auth::id(),
-    'post_title' => $request->post_title,
-    'post' => $request->post_body,
-]);
 
-// 例えばサブカテゴリーは単数選択なら
-if ($request->has('sub_category_id')) {
-    $post->subCategories()->attach($request->sub_category_id);
+    $post = Post::create([
+        'user_id' => Auth::id(),
+        'post_title' => $request->post_title,
+        'post' => $request->post_body,
+    ]);
+
+$post->subCategories()->attach($request->sub_category_id);
+
+    return redirect()->route('post.show');
 }
-        return redirect()->route('post.show');
-    }
 
     public function postEdit(Request $request){
 
