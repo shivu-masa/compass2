@@ -22,27 +22,37 @@ class PostsController extends Controller
 {
     $categories = MainCategory::with('subCategories')->get();
     $keyword = $request->keyword;
+    $subCategoryId = $request->sub_category_id;
+    $likePosts = $request->has('like_posts');
+    $myPosts = $request->has('my_posts');
+    $userId = auth()->id();
 
-    if ($request->has('sub_category_id')) {
-        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
-            ->withCount(['likes', 'postComments'])
-            ->whereHas('subCategories', function ($query) use ($request) {
-                $query->where('sub_category_id', $request->sub_category_id);
-            })->get();
+    $posts = Post::with(['user', 'postComments', 'subCategories'])
+        ->withCount(['likes', 'postComments'])
+        ->when($keyword, function ($query) use ($keyword) {
+            $query->where(function ($q) use ($keyword) {
+                $q->where('post_title', 'like', '%' . $keyword . '%')
+                  ->orWhere('post', 'like', '%' . $keyword . '%')
+                  ->orWhereHas('subCategories', function ($subQuery) use ($keyword) {
+                      $subQuery->where('sub_category', 'like', '%' . $keyword . '%');
+                  });
+            });
+        })
+        ->when($subCategoryId, function ($query) use ($subCategoryId) {
+            $query->whereHas('subCategories', function ($subQuery) use ($subCategoryId) {
+                $subQuery->where('sub_categories.id', $subCategoryId);
+            });
+        })
+        ->when($likePosts, function ($query) use ($userId) {
+            $query->whereHas('likes', function ($likeQuery) use ($userId) {
+                $likeQuery->where('user_id', $userId);
+            });
+        })
+        ->when($myPosts, function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })
+        ->get();
 
-    } elseif ($keyword) {
-        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
-            ->withCount(['likes', 'postComments'])
-            ->where('post_title', 'like', '%' . $keyword . '%')
-            ->orWhere('post', 'like', '%' . $keyword . '%')
-            ->get();
-    } else {
-        $posts = Post::with(['user', 'postComments', 'subCategories']) // ← 追加
-            ->withCount(['likes', 'postComments'])
-            ->get();
-    }
-
-    $categories = MainCategory::with('subCategories')->get();
     $like = new Like;
     $post_comment = new Post;
 

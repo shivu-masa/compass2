@@ -33,15 +33,14 @@
     </p>
   @endif
 </div>
-
         </div>
       </div>
     </div>
     @endforeach
   </div>
   <div class="other_area border w-25">
-    <div class="border m-4">
-      <div class=""><a href="{{ route('post.input') }}">投稿</a></div>
+  <div class="border m-4">
+    <div><a href="{{ route('post.input') }}">投稿</a></div>
       <div class="">
         <input type="text" placeholder="キーワードを検索" name="keyword" form="postSearchRequest">
         <input type="submit" value="検索" form="postSearchRequest">
