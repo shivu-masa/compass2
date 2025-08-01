@@ -31,55 +31,67 @@ class CalendarView{
     $html[] = '</tr>';
     $html[] = '</thead>';
     $html[] = '<tbody>';
+
     $weeks = $this->getWeeks();
     foreach($weeks as $week){
-      $html[] = '<tr class="'.$week->getClassName().'">';
+        $html[] = '<tr class="'.$week->getClassName().'">';
+        $days = $week->getDays();
 
-      $days = $week->getDays();
-      foreach($days as $day){
-        $startDay = $this->carbon->copy()->format("Y-m-01");
-        $toDay = $this->carbon->copy()->format("Y-m-d");
+        foreach($days as $day){
+    $startDay = $this->carbon->copy()->format("Y-m-01");
+    $toDay = \Carbon\Carbon::today();
 
-        if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){
-          $html[] = '<td class="calendar-td">';
-        }else{
-          $html[] = '<td class="calendar-td '.$day->getClassName().'">';
-        }
-        $html[] = $day->render();
+    $dayDate = $day->everyDay(); // 'Y-m-d' 形式の文字列
+    $dayDateCarbon = \Carbon\Carbon::parse($dayDate);
 
-        if(in_array($day->everyDay(), $day->authReserveDay())){
-          $reservePart = $day->authReserveDate($day->everyDay())->first()->setting_part;
-          if($reservePart == 1){
-            $reservePart = "リモ1部";
-          }else if($reservePart == 2){
-            $reservePart = "リモ2部";
-          }else if($reservePart == 3){
-            $reservePart = "リモ3部";
-          }
-          if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){
-            $html[] = '<p class="m-auto p-0 w-75" style="font-size:12px"></p>';
-            $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
-          }else{
-            $html[] = '<button type="submit" class="btn btn-danger p-0 w-75" name="delete_date" style="font-size:12px" value="'. $day->authReserveDate($day->everyDay())->first()->setting_reserve .'">'. $reservePart .'</button>';
-            $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
-          }
-        }else{
-          $html[] = $day->selectPart($day->everyDay());
-        }
-        $html[] = $day->getDate();
-        $html[] = '</td>';
-      }
-      $html[] = '</tr>';
+    $isPast = $dayDateCarbon->lt($toDay); // 今日より前の日付か
+
+    $tdClass = 'calendar-td ' . $day->getClassName();
+    if ($isPast) {
+        $tdClass .= ' bg-secondary text-light';
+    }
+
+    $html[] = '<td class="' . $tdClass . '">';
+    $html[] = $day->render();
+
+    if (in_array($dayDate, $this->authReserveDay())) {
+    $reservePart = $day->authReserveDate($dayDate)->first()->setting_part;
+    $reserveLabel = 'リモ' . $reservePart . '部';
+
+    if ($isPast) {
+        $html[] = '<p class="text-center m-auto p-1 w-75 bg-dark text-white" style="font-size:12px;">' . $reserveLabel . '</p>';
+    } else {
+        $html[] = '<button type="button" class="btn btn-danger p-0 w-75 open-cancel-modal"
+    data-date="' . $dayDate . '"
+    data-label="' . $reserveLabel . '"
+    style="font-size:12px;"
+>' . $reserveLabel . '</button>';
+    }
+
+    $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
+} else {
+    if ($isPast) {
+        $html[] = '<p class="text-muted m-auto p-1 w-75 border" style="font-size:12px;">受付終了</p>';
+        $html[] = '<!-- debug: 受付終了表示される日付 -> ' . $dayDate . ' -->';
+    } else {
+        $html[] = $day->selectPart($dayDate);
+    }
+}
+    $html[] = $day->getDate();
+    $html[] = '</td>';
+}
+        $html[] = '</tr>';
     }
     $html[] = '</tbody>';
     $html[] = '</table>';
     $html[] = '</div>';
-    $html[] = '<form action="/reserve/calendar" method="post" id="reserveParts">'.csrf_field().'</form>';
-    $html[] = '<form action="/delete/calendar" method="post" id="deleteParts">'.csrf_field().'</form>';
+    return implode("", $html);
+}
 
-    return implode('', $html);
-  }
 
+public function authReserveDay() {
+    return Auth::user()->reserveSettings->pluck('setting_reserve')->toArray();
+}
   protected function getWeeks(){
     $weeks = [];
     $firstDay = $this->carbon->copy()->firstOfMonth();

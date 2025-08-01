@@ -16,17 +16,22 @@ class CalendarWeekDay{
     return "day-" . strtolower($this->carbon->format("D"));
   }
 
-  function pastClassName(){
-    return;
-  }
+ function pastClassName(){
+    if ($this->carbon->isPast() && !$this->carbon->isToday()) {
+        return 'past-day'; // CSSでグレー背景指定
+    }
+    return '';
+}
 
   /**
    * @return
    */
 
    function render(){
-     return '<p class="day">' . $this->carbon->format("j"). '日</p>';
-   }
+    $class = $this->getClassName() . ' ' . $this->pastClassName(); // 曜日＋過去日CSS
+
+    return '<p class="' . $class . '">' . $this->carbon->format("j") . '日</p>';
+}
 
    function selectPart($ymd){
      $one_part_frame = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '1')->first();
@@ -85,5 +90,20 @@ class CalendarWeekDay{
    function authReserveDate($reserveDate){
      return Auth::user()->reserveSettings->where('setting_reserve', $reserveDate);
    }
+
+function reserveStatusText($ymd){
+    // 今日より前の日付なら過去
+    if (Carbon::parse($ymd)->isPast() && !Carbon::parse($ymd)->isToday()) {
+        $reserve = $this->authReserveDate($ymd);
+        if ($reserve->isEmpty()) {
+            return '<p class="text-danger small">受付終了</p>';
+        } else {
+            // 参加した部を配列で取得
+            $parts = $reserve->pluck('setting_part')->sort()->all();
+            return '<p class="text-primary small">参加：' . implode('・', $parts) . '部</p>';
+        }
+    }
+    return ''; // 未来日なら表示なし（必要なら変えてOK）
+}
 
 }

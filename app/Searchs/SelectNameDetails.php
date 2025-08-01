@@ -7,14 +7,11 @@ class SelectNameDetails implements DisplayUsers
 {
     public function resultUsers($keyword, $category, $updown, $gender, $role, $subjects)
     {
-        // 性別フィルター
-        $gender = is_null($gender) ? ['1', '2', '3'] : [$gender];
 
+        $gender = is_null($gender) ? ['1', '2', '3'] : [$gender];
         // 権限フィルター
         $role = is_null($role) ? ['1', '2', '3', '4'] : [$role];
-
         $query = User::with('subjects');
-
         // キーワード検索（空でなければ実行）
         if (!empty($keyword)) {
         $query->where(function ($q) use ($keyword) {

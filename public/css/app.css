@@ -1724,3 +1724,11 @@ li.sub-category {
   color: black;
   margin-left: 1em;
 }
+
+.past-day {
+  background-color: #e0e0e0;
+}
+
+.bg-secondary {
+  background-color: #e0e0e0 !important;
+}
