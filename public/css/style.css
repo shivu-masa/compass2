@@ -51,9 +51,7 @@ li {
   color: #FF0000;
 }
 
-.past-day {
-  background: #EEE;
-}
+
 
 .calendar-td {
   min-width: 100px;
@@ -286,4 +284,14 @@ li.main-category {
 li.sub-category {
   color: black;
   margin-left: 1em;
+}
+
+.bg-past {
+  background-color: #b8b8b8 !important;
+  /* Bootstrapでいう bg-light */
+}
+
+.calendar-date {
+  color: #212529 !important;
+  /* Bootstrapでいう text-dark */
 }

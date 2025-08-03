@@ -18,23 +18,42 @@ class CalendarController extends Controller
         return view('authenticated.calendar.general.calendar', compact('calendar'));
     }
 
-    public function reserve(Request $request){
-        DB::beginTransaction();
-        try{
-            $getPart = $request->input('getPart');
-$getDate = $request->input('getData');
-            $reserveDays = array_filter(array_combine($getDate, $getPart));
-            foreach($reserveDays as $key => $value){
-                $reserve_settings = ReserveSettings::where('setting_reserve', $key)->where('setting_part', $value)->first();
-                $reserve_settings->decrement('limit_users');
-                $reserve_settings->users()->attach(Auth::id());
+    public function reserve(Request $request)
+{
+    DB::beginTransaction();
+    try {
+        $getPart = $request->input('getPart', []);
+        $getDate = $request->input('getData', []);
+
+        foreach ($getDate as $i => $date) {
+            $part = $getPart[$i] ?? null;
+            if (!empty($part)) {
+                $reserve_settings = ReserveSettings::where('setting_reserve', $date)
+                    ->where('setting_part', $part)
+                    ->first();
+
+                if ($reserve_settings) {
+                    $reserve_settings->decrement('limit_users');
+                    $reserve_settings->users()->attach(Auth::id());
+                }
             }
-            DB::commit();
-        }catch(\Exception $e){
-            DB::rollback();
         }
-        return redirect()->route('calendar.general.show', ['user_id' => Auth::id()]);
+
+        DB::commit();
+    } catch (\Exception $e) {
+        DB::rollback();
+        // エラー内容をログに出力しておくとデバッグしやすい
+        \Log::error('予約処理中にエラーが発生', [
+            'message' => $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ]);
+
+        return back()->with('error', '予約処理中にエラーが発生しました。');
     }
+
+    return redirect()->route('calendar.general.show', ['user_id' => Auth::id()])
+        ->with('success', '予約が完了しました。');
+}
 
     public function delete(Request $request)
 {

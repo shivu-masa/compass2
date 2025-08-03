@@ -91,19 +91,6 @@ class CalendarWeekDay{
      return Auth::user()->reserveSettings->where('setting_reserve', $reserveDate);
    }
 
-function reserveStatusText($ymd){
-    // 今日より前の日付なら過去
-    if (Carbon::parse($ymd)->isPast() && !Carbon::parse($ymd)->isToday()) {
-        $reserve = $this->authReserveDate($ymd);
-        if ($reserve->isEmpty()) {
-            return '<p class="text-danger small">受付終了</p>';
-        } else {
-            // 参加した部を配列で取得
-            $parts = $reserve->pluck('setting_part')->sort()->all();
-            return '<p class="text-primary small">参加：' . implode('・', $parts) . '部</p>';
-        }
-    }
-    return ''; // 未来日なら表示なし（必要なら変えてOK）
-}
+
 
 }

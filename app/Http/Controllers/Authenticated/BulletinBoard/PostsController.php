@@ -34,8 +34,8 @@ class PostsController extends Controller
                 $q->where('post_title', 'like', '%' . $keyword . '%')
                   ->orWhere('post', 'like', '%' . $keyword . '%')
                   ->orWhereHas('subCategories', function ($subQuery) use ($keyword) {
-                      $subQuery->where('sub_category', 'like', '%' . $keyword . '%');
-                  });
+    $subQuery->where('sub_category', $keyword);
+});
             });
         })
         ->when($subCategoryId, function ($query) use ($subCategoryId) {

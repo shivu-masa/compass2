@@ -15,7 +15,8 @@ class CalendarView{
     return $this->carbon->format('Y年n月');
   }
 
-  function render(){
+ public function render(){
+
     $html = [];
     $html[] = '<div class="calendar text-center">';
     $html[] = '<table class="table">';
@@ -47,38 +48,43 @@ class CalendarView{
     $isPast = $dayDateCarbon->lt($toDay); // 今日より前の日付か
 
     $tdClass = 'calendar-td ' . $day->getClassName();
-    if ($isPast) {
-        $tdClass .= ' bg-secondary text-light';
-    }
+if ($isPast) {
+    $tdClass .= ' bg-past'; // 独自クラスで制御するようにします
+}
 
-    $html[] = '<td class="' . $tdClass . '">';
-    $html[] = $day->render();
+$html[] = '<td class="' . $tdClass . '">';
+$html[] = $day->render();
 
-    if (in_array($dayDate, $this->authReserveDay())) {
+$html[] = $day->getDate();
+
+if (in_array($dayDate, $this->authReserveDay())) {
     $reservePart = $day->authReserveDate($dayDate)->first()->setting_part;
     $reserveLabel = 'リモ' . $reservePart . '部';
 
+    // 表示部分（モーダル or ラベル）
     if ($isPast) {
         $html[] = '<p class="text-center m-auto p-1 w-75 bg-dark text-white" style="font-size:12px;">' . $reserveLabel . '</p>';
     } else {
         $html[] = '<button type="button" class="btn btn-danger p-0 w-75 open-cancel-modal"
-    data-date="' . $dayDate . '"
-    data-label="' . $reserveLabel . '"
-    style="font-size:12px;"
->' . $reserveLabel . '</button>';
+            data-date="' . $dayDate . '"
+            data-label="' . $reserveLabel . '"
+            style="font-size:12px;">' . $reserveLabel . '</button>';
     }
 
-    $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
+    // 予約されている部番（hidden）
+    $html[] = '<input type="hidden" name="getPart[]" value="' . $reservePart . '" form="reserveParts">';
+
 } else {
     if ($isPast) {
-        $html[] = '<p class="text-muted m-auto p-1 w-75 border" style="font-size:12px;">受付終了</p>';
-        $html[] = '<!-- debug: 受付終了表示される日付 -> ' . $dayDate . ' -->';
+        $html[] = '<p class="m-auto p-1 w-75 text-dark" style="font-size:12px;">受付終了</p>';
+        $html[] = '<input type="hidden" name="getPart[]" value="" form="reserveParts">';
     } else {
         $html[] = $day->selectPart($dayDate);
+
     }
 }
-    $html[] = $day->getDate();
-    $html[] = '</td>';
+
+$html[] = '</td>';
 }
         $html[] = '</tr>';
     }

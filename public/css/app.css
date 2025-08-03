@@ -1732,3 +1732,14 @@ li.sub-category {
 .bg-secondary {
   background-color: #e0e0e0 !important;
 }
+
+.bg-custom-light {
+  background-color: #797979 !important;
+}
+
+
+
+.calendar-date {
+  color: #212529 !important;
+  /* Bootstrapでいう text-dark */
+}
