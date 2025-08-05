@@ -61,7 +61,7 @@ if (in_array($dayDate, $this->authReserveDay())) {
     $reservePart = $day->authReserveDate($dayDate)->first()->setting_part;
     $reserveLabel = 'リモ' . $reservePart . '部';
 
-    // 表示部分（モーダル or ラベル）
+
     if ($isPast) {
         $html[] = '<p class="text-center m-auto p-1 w-75 bg-dark text-white" style="font-size:12px;">' . $reserveLabel . '</p>';
     } else {

@@ -25,24 +25,46 @@ class CalendarWeekDay{
 
   function dayPartCounts($ymd){
     $html = [];
-    $one_part = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '1')->first();
-    $two_part = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '2')->first();
-    $three_part = ReserveSettings::with('users')->where('setting_reserve', $ymd)->where('setting_part', '3')->first();
 
-    $html[] = '<div class="text-left">';
-    if($one_part){
-      $html[] = '<p class="day_part m-0 pt-1">1部</p>';
+    $one_part = ReserveSettings::withCount('users')
+        ->where('setting_reserve', $ymd)
+        ->where('setting_part', '1')
+        ->first();
+
+    $two_part = ReserveSettings::withCount('users')
+        ->where('setting_reserve', $ymd)
+        ->where('setting_part', '2')
+        ->first();
+
+    $three_part = ReserveSettings::withCount('users')
+        ->where('setting_reserve', $ymd)
+        ->where('setting_part', '3')
+        ->first();
+
+    $html[] = '<div class="text-left small">';
+
+    if ($one_part) {
+        $html[] = '<p class="m-0 pt-1">';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 1]) . '">1部</a> ' . $one_part->users_count . '人';
+        $html[] = '</p>';
     }
-    if($two_part){
-      $html[] = '<p class="day_part m-0 pt-1">2部</p>';
+
+    if ($two_part) {
+        $html[] = '<p class="m-0 pt-1">';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 2]) . '">2部</a> ' . $two_part->users_count . '人';
+        $html[] = '</p>';
     }
-    if($three_part){
-      $html[] = '<p class="day_part m-0 pt-1">3部</p>';
+
+    if ($three_part) {
+        $html[] = '<p class="m-0 pt-1">';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 3]) . '">3部</a> ' . $three_part->users_count . '人';
+        $html[] = '</p>';
     }
+
     $html[] = '</div>';
 
     return implode("", $html);
-  }
+}
 
 
   function onePartFrame($day){
