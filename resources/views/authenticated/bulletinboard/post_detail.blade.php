@@ -6,15 +6,23 @@
         <div class="detail_inner_head">
           <div>
           </div>
-          <div>
+          <div class="d-flex justify-content-end gap-2">
+  @if(Auth::id() === $post->user_id)
+    <button class="btn btn-primary btn-sm edit-modal-open"
+      post_title="{{ $post->post_title }}"
+      post_body="{{ $post->post }}"
+      post_id="{{ $post->id }}">
+      編集
+    </button>
+  @endif
 
-          @if(Auth::id() === $post->user_id)
-            <span class="edit-modal-open" post_title="{{ $post->post_title }}" post_body="{{ $post->post }}" post_id="{{ $post->id }}">編集</span>
-            @endif
-            @if(Auth::id() === $post->user_id)
-            <a href="#" class="delete-modal-open" data-post-id="{{ $post->id }}">削除</a>
-            @endif
-          </div>
+  @if(Auth::id() === $post->user_id)
+    <button class="btn btn-danger btn-sm delete-modal-open"
+      data-post-id="{{ $post->id }}">
+      削除
+    </button>
+  @endif
+</div>
         </div>
         <div class="w-100 mb-2">
     @if ($errors->has('post_title'))
@@ -24,6 +32,12 @@
       <div class="text-danger">{{ $errors->first('post_body') }}</div>
     @endif
   </div>
+<p>
+  @foreach($post->subCategories as $subCategory)
+    <span class="sub-category-box">{{ $subCategory->sub_category }}</span>@if(!$loop->last)、@endif
+  @endforeach
+</p>
+
         <div class="contributor d-flex">
           <p>
             <span>{{ $post->user->over_name }}</span>
@@ -54,11 +68,12 @@
   <div class="w-50 p-3">
     <div class="comment_container border m-5">
       <div class="comment_area p-3">
-        <p class="m-0">コメントする</p>
-        {{-- バリデーションエラー表示 --}}
-  @if ($errors->has('comment'))
+         @if ($errors->has('comment'))
     <div class="text-danger">{{ $errors->first('comment') }}</div>
   @endif
+        <p class="m-0">コメントする</p>
+        {{-- バリデーションエラー表示 --}}
+
         <textarea class="w-100" name="comment" form="commentRequest"></textarea>
         <input type="hidden" name="post_id" form="commentRequest" value="{{ $post->id }}">
         <input type="submit" class="btn btn-primary" form="commentRequest" value="投稿">
@@ -74,12 +89,12 @@
     <form action="{{ route('post.edit') }}" method="post">
       {{ csrf_field() }}
       <div class="w-100">
-        <div class="modal-inner-title w-50 m-auto">
-          <input type="text" name="post_title" placeholder="タイトル" class="w-100">
-        </div>
-        <div class="modal-inner-body w-50 m-auto pt-3 pb-3">
-          <textarea placeholder="投稿内容" name="post_body" class="w-100"></textarea>
-        </div>
+        <div class="modal-inner-title w-50 m-auto px-2">
+  <input type="text" name="post_title" placeholder="タイトル" class="w-100 form-control">
+</div>
+<div class="modal-inner-body w-50 m-auto pt-3 pb-3 px-2">
+  <textarea placeholder="投稿内容" name="post_body" class="w-100 form-control" rows="5"></textarea>
+</div>
         <div class="w-50 m-auto edit-modal-btn d-flex">
           <a class="js-modal-close btn btn-danger d-inline-block" href="">閉じる</a>
           <input type="hidden" class="edit-modal-hidden" name="post_id" value="">

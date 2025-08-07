@@ -18,9 +18,9 @@ li {
 
 /* サイドバー */
 .sidebar {
-  width: 150px;
+  width: 180px;
   height: 100vh;
-  background-color: #03AAD2;
+  background-color: #20aacc;
   font-weight: bold;
 }
 
@@ -294,4 +294,16 @@ li.sub-category {
 .calendar-date {
   color: #212529 !important;
   /* Bootstrapでいう text-dark */
+}
+
+.sub-category-box {
+  display: inline-block;
+  background-color: #007bff;
+  /* Bootstrapの水色(プライマリー) */
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin-right: 4px;
+  white-space: nowrap;
 }

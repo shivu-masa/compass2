@@ -6,11 +6,11 @@
     <div class="post_area border w-75 m-auto p-3">
       <p><span>{{ $post->user->over_name }}</span><span class="ml-3">{{ $post->user->under_name }}</span>さん</p>
       <p><a href="{{ route('post.detail', ['id' => $post->id]) }}">{{ $post->post_title }}</a></p>
-       <p>カテゴリー：
-      @foreach($post->subCategories as $subCategory)
-        <span>{{ $subCategory->sub_category }}</span>@if(!$loop->last)、@endif
-      @endforeach
-    </p>
+       <p>
+  @foreach($post->subCategories as $subCategory)
+    <span class="sub-category-box">{{ $subCategory->sub_category }}</span>@if(!$loop->last)、@endif
+  @endforeach
+</p>
       <div class="post_bottom_area d-flex">
         <div class="d-flex post_status">
           <div class="mr-5">
@@ -38,31 +38,97 @@
     </div>
     @endforeach
   </div>
-  <div class="other_area border w-25">
-  <div class="border m-4">
-    <div><a href="{{ route('post.input') }}">投稿</a></div>
-      <div class="">
-        <input type="text" placeholder="キーワードを検索" name="keyword" form="postSearchRequest">
-        <input type="submit" value="検索" form="postSearchRequest">
-      </div>
-      <input type="submit" name="like_posts" class="category_btn" value="いいねした投稿" form="postSearchRequest">
-      <input type="submit" name="my_posts" class="category_btn" value="自分の投稿" form="postSearchRequest">
-      <ul>
-@foreach($categories as $main_category)
-  <li style="color: gray;">{{ $main_category->main_category }}</li>
-  <ul>
-    @foreach($main_category->subCategories as $sub_category)
-      <li style="color: black;">
-     <a href="{{ route('post.show') }}?sub_category_id={{ $sub_category->id }}">
-    {{ $sub_category->sub_category }}
-</a>
+
+  <div class="mt-5    other_area  w-25 ">
+  <div class="m-4">
+
+    {{-- 投稿ボタン --}}
+    <div class="mb-3">
+      <a href="{{ route('post.input') }}" class="btn btn-primary w-100"> 投稿する</a>
+    </div>
+
+    {{-- キーワード検索 --}}
+    <div class="input-group mb-3">
+  <input type="text" name="keyword" class="form-control" placeholder="キーワードを検索" form="postSearchRequest">
+  <button type="submit" class="btn btn-info" form="postSearchRequest">検索</button>
+</div>
+
+    {{-- フィルター --}}
+ <div class="mb-3 d-flex gap-2">
+  <input type="submit" name="like_posts"
+         class="btn w-50"
+         value=" いいねした投稿"
+         form="postSearchRequest"
+         style="color: white; background-color: #e83e8c; border: 1px solid #e83e8c;">
+
+  <input type="submit" name="my_posts"
+         class="btn w-50"
+         value=" 自分の投稿"
+         form="postSearchRequest"
+         style="color: white; background-color: #fd7e14; border: 1px solid #fd7e14;">
+</div>
+<strong>検索ワード</strong>
+    {{-- カテゴリー一覧 --}}
+    <style>
+  .category-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+<div class="category-list">
+  <ul class="list-unstyled">
+    @foreach($categories as $index => $main_category)
+      <li class="fw-bold text-secondary category-toggle" data-target="subcat-{{ $index }}">
+        <span>{{ $main_category->main_category }}</span>
+        <span class="arrow">▲</span> {{-- 初期は閉じているので上向き --}}
       </li>
+      <ul class="ms-3 mb-3 sub-category-list" id="subcat-{{ $index }}">
+        @foreach($main_category->subCategories as $sub_category)
+          <li>
+            <a href="{{ route('post.show') }}?sub_category_id={{ $sub_category->id }}" class="text-decoration-none">
+              {{ $sub_category->sub_category }}
+            </a>
+          </li>
+        @endforeach
+      </ul>
     @endforeach
   </ul>
-@endforeach
-</ul>
-    </div>
-  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.category-toggle');
+
+    toggles.forEach(toggle => {
+      const targetId = toggle.getAttribute('data-target');
+      const subList = document.getElementById(targetId);
+
+      // 初期状態：閉じる（非表示）
+      subList.style.display = 'none';
+
+      toggle.addEventListener('click', () => {
+        const isVisible = subList.style.display === 'block';
+
+        if (isVisible) {
+          // 開いてる → 閉じる
+          subList.style.display = 'none';
+          toggle.querySelector('.arrow').textContent = '▲';
+        } else {
+          // 閉じてる → 開く
+          subList.style.display = 'block';
+          toggle.querySelector('.arrow').textContent = '▼';
+        }
+      });
+    });
+  });
+</script>
+
+
+  {{-- 検索フォーム --}}
+
   <form action="{{ route('post.show') }}" method="get" id="postSearchRequest"></form>
 </div>
 </x-sidebar>

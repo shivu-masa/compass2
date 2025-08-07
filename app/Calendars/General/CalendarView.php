@@ -42,7 +42,7 @@ class CalendarView{
     $startDay = $this->carbon->copy()->format("Y-m-01");
     $toDay = \Carbon\Carbon::today();
 
-    $dayDate = $day->everyDay(); // 'Y-m-d' 形式の文字列
+    $dayDate = $day->everyDay();
     $dayDateCarbon = \Carbon\Carbon::parse($dayDate);
 
     $isPast = $dayDateCarbon->lt($toDay); // 今日より前の日付か
