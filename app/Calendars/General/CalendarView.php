@@ -45,7 +45,7 @@ class CalendarView{
     $dayDate = $day->everyDay();
     $dayDateCarbon = \Carbon\Carbon::parse($dayDate);
 
-    $isPast = $dayDateCarbon->lt($toDay); // 今日より前の日付か
+    $isPast = $dayDateCarbon->lte($toDay); // 今日も含めて過去扱い
 
     $tdClass = 'calendar-td ' . $day->getClassName();
 if ($isPast) {

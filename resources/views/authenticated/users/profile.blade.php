@@ -12,24 +12,28 @@
     <span>{{ $subject->subject }}</span>
   @endforeach
 </div>
-      <div class="">
-        @can('admin')
-        <span class="subject_edit_btn">選択科目の編集</span>
-        <div class="subject_inner">
-          <form action="{{ route('user.edit') }}" method="post">
-            @foreach($subject_lists as $subject_list)
-            <div>
-              <label>{{ $subject_list->subject }}</label>
-              <input type="checkbox" name="subjects[]" value="{{ $subject_list->id }}">
-            </div>
-            @endforeach
-            <input type="submit" value="編集" class="btn btn-primary">
-            <input type="hidden" name="user_id" value="{{ $user->id }}">
-            {{ csrf_field() }}
-          </form>
-        </div>
-        @endcan
+      <div>
+  @can('admin')
+    <span class="subject_edit_btn">
+      選択科目の登録 <span class="arrow">△</span>
+    </span>
+    <div class="subject_inner" style="display:none;">
+  <form action="{{ route('user.edit') }}" method="post" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+    @foreach($subject_lists as $subject_list)
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <label for="subject-{{ $subject_list->id }}" style="margin: 0;">{{ $subject_list->subject }}</label>
+        <input type="checkbox" id="subject-{{ $subject_list->id }}" name="subjects[]" value="{{ $subject_list->id }}">
       </div>
+    @endforeach
+
+    <input type="submit" value="登録" class="btn btn-primary" style="white-space: nowrap;">
+    <input type="hidden" name="user_id" value="{{ $user->id }}">
+    {{ csrf_field() }}
+  </form>
+</div>
+  @endcan
+</div>
+
     </div>
   </div>
 </div>

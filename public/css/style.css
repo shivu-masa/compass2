@@ -307,3 +307,10 @@ li.sub-category {
   margin-right: 4px;
   white-space: nowrap;
 }
+
+.past-day {
+  background-color: #ccc;
+  /* グレー */
+  color: #666;
+  /* 文字も薄く */
+}

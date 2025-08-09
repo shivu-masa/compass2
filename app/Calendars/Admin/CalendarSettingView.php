@@ -38,12 +38,13 @@ class CalendarSettingView{
       foreach($days as $day){
         $startDay = $this->carbon->format("Y-m-01");
         $toDay = $this->carbon->format("Y-m-d");
+$dayDate = \Carbon\Carbon::parse($day->everyDay());
 
-       if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){
-          $html[] = '<td class="past-day border">';
-        }else{
-          $html[] = '<td class="border '.$day->getClassName().'">';
-        }
+       if ($dayDate->lte($toDay)) { // 今日も含めて過去扱い
+    $html[] = '<td class="past-day border">';
+} else {
+    $html[] = '<td class="border '.$day->getClassName().'">';
+}
         $html[] = $day->render();
         $html[] = '<div class="adjust-area">';
         if($day->everyDay()){

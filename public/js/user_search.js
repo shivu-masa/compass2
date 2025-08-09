@@ -5,12 +5,15 @@ $(function () {
 
     // 矢印の変更（△ ↔ ▽）
     const arrow = $('.arrow-icon');
-    const current = arrow.text();
-    arrow.text(current === '▽' ? '△' : '▽');
+    arrow.text(arrow.text() === '▽' ? '△' : '▽');
   });
 
-  // 既存の subject_edit_btn の開閉（必要な場合）
+  // 選択科目の登録 開閉＆矢印切り替え
   $('.subject_edit_btn').click(function () {
     $('.subject_inner').slideToggle();
+
+    // 矢印の切り替え（このボタン内の .arrow 要素だけ）
+    let arrow = $(this).find('.arrow');
+    arrow.text(arrow.text() === '△' ? '▽' : '△');
   });
 });

@@ -113,25 +113,43 @@
     </div>
 
     <div class="selected_engineer">
-      <h6>選択科目</h6>
-      <div style="display: flex; flex-direction: column;">
-        @foreach($subjects as $subject)
-          <label>
-            <input type="checkbox" name="subject[]" value="{{ $subject->id }}" form="userSearchRequest">
-            {{ $subject->subject }}
-          </label>
-        @endforeach
-      </div>
-    </div>
+  <h6>選択科目</h6>
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px;">
+    @foreach($subjects as $subject)
+      <label>
+        <input type="checkbox" name="subject[]" value="{{ $subject->id }}" form="userSearchRequest">
+        {{ $subject->subject }}
+      </label>
+    @endforeach
+  </div>
+</div>
   </div>
 </div>
 
-      <div>
-        <input type="submit" name="search_btn" value="検索" form="userSearchRequest">
-      </div>
-      <div>
-        <input type="reset" value="リセット" form="userSearchRequest">
-      </div>
+      <input type="submit"
+         name="search_btn"
+         value="検索"
+         form="userSearchRequest"
+         style="background-color: #4fc3f7;
+                color: white;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;">
+</div>
+
+<div style="margin-top: 8px; text-align: center;">
+  <!-- リセットリンク -->
+  <a href="#"
+     onclick="document.getElementById('userSearchRequest').reset(); return false;"
+     style="color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;">
+    リセット
+  </a>
+</div>
 
     </div>
     <form action="{{ route('user.show') }}" method="get" id="userSearchRequest"></form>

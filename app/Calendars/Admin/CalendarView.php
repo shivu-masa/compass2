@@ -37,13 +37,15 @@ class CalendarView{
       $html[] = '<tr class="'.$week->getClassName().'">';
       $days = $week->getDays();
       foreach($days as $day){
-        $startDay = $this->carbon->format("Y-m-01");
-        $toDay = $this->carbon->format("Y-m-d");
-        if($startDay <= $day->everyDay() && $toDay >= $day->everyDay()){
-          $html[] = '<td class="past-day border">';
-        }else{
-          $html[] = '<td class="border '.$day->getClassName().'">';
-        }
+
+       $today = date("Y-m-d"); // 今日の日付
+
+if ($day->everyDay() <= $today) {
+    // 今日を含めて過去日扱いにする
+    $html[] = '<td class="past-day border">';
+} else {
+    $html[] = '<td class="border '.$day->getClassName().'">';
+}
         $html[] = $day->render();
         $html[] = $day->dayPartCounts($day->everyDay());
         $html[] = '</td>';
