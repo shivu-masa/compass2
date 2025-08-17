@@ -15,7 +15,7 @@
       <div>
   @can('admin')
     <span class="subject_edit_btn">
-      選択科目の登録 <span class="arrow">△</span>
+      選択科目の登録 <span class="arrow">▲</span>
     </span>
     <div class="subject_inner" style="display:none;">
   <form action="{{ route('user.edit') }}" method="post" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">

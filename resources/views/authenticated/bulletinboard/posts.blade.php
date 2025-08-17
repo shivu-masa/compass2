@@ -44,13 +44,21 @@
 
     {{-- 投稿ボタン --}}
     <div class="mb-3">
-      <a href="{{ route('post.input') }}" class="btn btn-primary w-100"> 投稿する</a>
-    </div>
+  <a href="{{ route('post.input') }}"
+     class="btn w-100"
+     style="background-color:#20aacc; border-color:#20aacc; color:white;">
+    投稿する
+  </a>
+</div>
 
     {{-- キーワード検索 --}}
     <div class="input-group mb-3">
   <input type="text" name="keyword" class="form-control" placeholder="キーワードを検索" form="postSearchRequest">
-  <button type="submit" class="btn btn-info" form="postSearchRequest">検索</button>
+  <button type="submit" class="btn"
+        style="background-color:#20aacc; border-color:#20aacc; color:white;"
+        form="postSearchRequest">
+  検索
+</button>
 </div>
 
     {{-- フィルター --}}
@@ -93,38 +101,14 @@
             </a>
           </li>
         @endforeach
+
       </ul>
+
     @endforeach
   </ul>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggles = document.querySelectorAll('.category-toggle');
 
-    toggles.forEach(toggle => {
-      const targetId = toggle.getAttribute('data-target');
-      const subList = document.getElementById(targetId);
-
-      // 初期状態：閉じる（非表示）
-      subList.style.display = 'none';
-
-      toggle.addEventListener('click', () => {
-        const isVisible = subList.style.display === 'block';
-
-        if (isVisible) {
-          // 開いてる → 閉じる
-          subList.style.display = 'none';
-          toggle.querySelector('.arrow').textContent = '▲';
-        } else {
-          // 閉じてる → 開く
-          subList.style.display = 'block';
-          toggle.querySelector('.arrow').textContent = '▼';
-        }
-      });
-    });
-  });
-</script>
 
 
   {{-- 検索フォーム --}}

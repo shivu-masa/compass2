@@ -23,51 +23,75 @@
             <div class="sidebar">
     <p>
         <a href="{{ route('top.show') }}">
-            <img src="{{ asset('image/home.png') }}" alt="トップ" style="width:18px; height:18px; margin-right:3px;margin-left:3px; vertical-align:middle;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="margin-right:3px;margin-left:3px; vertical-align:middle;">
+    <path d="M3 12L12 3l9 9h-3v9h-12v-9H3z" fill="none" stroke="#ffffff" stroke-width="2"/>
+</svg>
             トップ
         </a>
     </p>
-    <p>
-        <a href="/logout">
-            <img src="{{ asset('image/log-out.png') }}" alt="ログアウト" style="width:18px; height:18px; margin-right:3px; margin-left:3px;vertical-align:middle;">
-            ログアウト
-        </a>
-    </p>
-    <p>
-        <a href="{{ route('calendar.general.show',['user_id' => Auth::id()]) }}">
-            <img src="{{ asset('image/calendar.png') }}" alt="スクール予約" style="width:18px; height:18px; margin-right:3px; margin-left:3px; vertical-align:middle;">
-            スクール予約
-        </a>
-    </p>
+   <p>
+    <a href="/logout" class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+            <path d="M16 17l5-5-5-5M21 12H9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h7" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        ログアウト
+    </a>
+</p>
+
+<p>
+    <a href="{{ route('calendar.general.show',['user_id' => Auth::id()]) }}" class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="white" stroke-width="2"/>
+            <line x1="16" y1="2" x2="16" y2="6" fill="none" stroke="white" stroke-width="2"/>
+            <line x1="8" y1="2" x2="8" y2="6" fill="none" stroke="white" stroke-width="2"/>
+            <line x1="3" y1="10" x2="21" y2="10" fill="none" stroke="white" stroke-width="2"/>
+        </svg>
+        スクール予約
+    </a>
+</p>
 
     {{-- 講師（role: 1, 2, 3）のみ表示 --}}
     @if(in_array(Auth::user()->role, [1, 2, 3]))
-        <p>
-            <a href="{{ route('calendar.admin.show', ['user_id' => Auth::id()]) }}">
-                <img src="{{ asset('image/restaurant.png') }}" alt="スクール予約確認" style="width:18px; height:18px; margin-right:3px; margin-left:3px; vertical-align:middle;">
-                スクール予約確認
-            </a>
-        </p>
-        <p>
-            <a href="{{ route('calendar.admin.setting', ['user_id' => Auth::id()]) }}">
-                <img src="{{ asset('image/calendar (1).png') }}" alt="スクール枠登録" style="width:18px; height:18px; margin-right:3px; margin-left:3px; vertical-align:middle;">
-                スクール枠登録
-            </a>
-        </p>
-    @endif
+    <p>
+        <a href="{{ route('calendar.admin.show', ['user_id' => Auth::id()]) }}" class="d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" fill="none" stroke="white" stroke-width="2"/>
+                <path d="M3 8h18" fill="none" stroke="white" stroke-width="2"/>
+            </svg>
+            スクール予約確認
+        </a>
+    </p>
+    <p>
+        <a href="{{ route('calendar.admin.setting', ['user_id' => Auth::id()]) }}" class="d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="white" stroke-width="2"/>
+                <line x1="3" y1="10" x2="21" y2="10" fill="none" stroke="white" stroke-width="2"/>
+            </svg>
+            スクール枠登録
+        </a>
+    </p>
+@endif
 
-    <p>
-        <a href="{{ route('post.show') }}">
-            <img src="{{ asset('image/comment.png') }}" alt="掲示板" style="width:18px; height:18px; margin-right:3px; margin-left:3px; vertical-align:middle;">
-            掲示板
-        </a>
-    </p>
-    <p>
-        <a href="{{ route('user.show') }}">
-            <img src="{{ asset('image/group.png') }}" alt="ユーザー検索" style="width:18px; height:18px; margin-right:3px; margin-left:3px; vertical-align:middle;">
-            ユーザー検索
-        </a>
-    </p>
+<p>
+    <a href="{{ route('post.show') }}" class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2"/>
+            <path d="M8 12h8M8 16h5" fill="none" stroke="white" stroke-width="2"/>
+        </svg>
+        掲示板
+    </a>
+</p>
+
+<p>
+    <a href="{{ route('user.show') }}" class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="margin-right:3px; margin-left:3px; vertical-align:middle;">
+            <circle cx="12" cy="8" r="4" fill="none" stroke="white" stroke-width="2"/>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="none" stroke="white" stroke-width="2"/>
+        </svg>
+        ユーザー検索
+    </a>
+</p>
 </div>
             <div class="main-container">
                 {{ $slot }}

@@ -63,7 +63,7 @@ if (in_array($dayDate, $this->authReserveDay())) {
 
 
     if ($isPast) {
-        $html[] = '<p class="text-center m-auto p-1 w-75 bg-dark text-white" style="font-size:12px;">' . $reserveLabel . '</p>';
+        $html[] = '<p class="text-center m-auto p-1 w-75 text-dark" style="font-size:12px;">' . $reserveLabel . '</p>';
     } else {
         $html[] = '<button type="button" class="btn btn-danger p-0 w-75 open-cancel-modal"
             data-date="' . $dayDate . '"

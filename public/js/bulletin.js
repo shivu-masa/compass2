@@ -79,4 +79,17 @@ $(function () {
     $('.js-delete-modal').fadeOut();
     return false;
   });
+
+  $('.sub-category-list').hide();
+
+  $('.category-toggle').on('click', function () {
+    const targetId = $(this).data('target');       // 開閉対象のULのID取得
+    const subList = $('#' + targetId);             // jQueryで取得
+
+    subList.slideToggle(300);                      // 0.3秒で滑らかに開閉
+
+    // この li 内の .arrow だけ切り替え
+    const arrow = $(this).find('.arrow');
+    arrow.text(arrow.text() === '▲' ? '▼' : '▲');
+  });
 });

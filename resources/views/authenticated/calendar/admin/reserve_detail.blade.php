@@ -13,7 +13,7 @@
     <p><span> {{ $date }}日</span><span class="ml-3">{{ $part }}部</span></p>
     <div class="h-75 border">
       <table class="table">
-        <thead style="background-color: #0080ffff; color: white;">
+        <thead style="background-color: #20aacc; color: white;">
   <tr class="text-center">
     <th class="w-25">ユーザーID</th>
     <th class="w-25">ユーザー名</th>

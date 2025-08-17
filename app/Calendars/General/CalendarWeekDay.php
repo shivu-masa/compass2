@@ -13,12 +13,21 @@ class CalendarWeekDay{
   }
 
   function getClassName(){
+     $dayOfWeek = $this->carbon->dayOfWeek;
+
+    if ($dayOfWeek === 0) {         // 日曜
+        return 'text-danger';       // 赤文字
+    } elseif ($dayOfWeek === 6) {   // 土曜
+        return 'text-primary';      // 青文字
+    } else {                        // 平日
+        return 'text-dark';         // 黒文字
+    }
     return "day-" . strtolower($this->carbon->format("D"));
   }
 
  function pastClassName(){
     if ($this->carbon->isPast() && !$this->carbon->isToday()) {
-        return 'past-day'; // CSSでグレー背景指定
+        return '';   // 背景グレーだけ付与
     }
     return '';
 }
@@ -28,9 +37,11 @@ class CalendarWeekDay{
    */
 
    function render(){
-    $class = $this->getClassName() . ' ' . $this->pastClassName(); // 曜日＋過去日CSS
+    $weekdayClass = $this->getClassName();   // 曜日クラス（赤,青,黒）
+    $pastClass    = $this->pastClassName();  // 過去日クラス（背景グレーのみ）
 
-    return '<p class="' . $class . '">' . $this->carbon->format("j") . '日</p>';
+    return '<p class="' . $weekdayClass . ' ' . $pastClass . '">'
+         . $this->carbon->format("j") . '日</p>';
 }
 
    function selectPart($ymd){
