@@ -41,23 +41,34 @@ class CalendarWeekDay{
         ->where('setting_part', '3')
         ->first();
 
+    // 曜日取得
+    $dayOfWeek = \Carbon\Carbon::parse($ymd)->format('w'); // 0=日曜,6=土曜
+    $partColor = '';
+    if ($dayOfWeek == 6) { // 土曜
+        $partColor = 'color:blue;';
+    } elseif ($dayOfWeek == 0) { // 日曜
+        $partColor = 'color:red;';
+    } else { // 平日
+        $partColor = 'color:black;';
+    }
+
     $html[] = '<div class="text-left small">';
 
     if ($one_part) {
         $html[] = '<p class="m-0 pt-1">';
-        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 1]) . '">1部</a> ' . $one_part->users_count . '人';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 1]) . '" style="'.$partColor.'">1部</a> <span style="color:black;">' . $one_part->users_count . '人</span>';
         $html[] = '</p>';
     }
 
     if ($two_part) {
         $html[] = '<p class="m-0 pt-1">';
-        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 2]) . '">2部</a> ' . $two_part->users_count . '人';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 2]) . '" style="'.$partColor.'">2部</a> <span style="color:black;">' . $two_part->users_count . '人</span>';
         $html[] = '</p>';
     }
 
     if ($three_part) {
         $html[] = '<p class="m-0 pt-1">';
-        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 3]) . '">3部</a> ' . $three_part->users_count . '人';
+        $html[] = '<a href="' . route('calendar.admin.detail', ['date' => $ymd, 'part' => 3]) . '" style="'.$partColor.'">3部</a> <span style="color:black;">' . $three_part->users_count . '人</span>';
         $html[] = '</p>';
     }
 
@@ -65,7 +76,6 @@ class CalendarWeekDay{
 
     return implode("", $html);
 }
-
 
   function onePartFrame($day){
     $one_part_frame = ReserveSettings::where('setting_reserve', $day)->where('setting_part', '1')->first();

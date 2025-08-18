@@ -83,7 +83,9 @@
   @endforeach
 @endif
           <label class="d-block m-0 aa" style="font-size:13px">生年月日</label>
-          <select class="old_year" name="old_year">
+          <select name="old_year"
+  style="border:none; border-bottom:1px solid #345fd8ff; outline:none;
+         background:transparent; font-size:14px; width:90px;">
             <option value="none">-----</option>
             <option value="1985">1985</option>
             <option value="1986">1986</option>
@@ -113,7 +115,10 @@
             <option value="2010">2010</option>
           </select>
           <label style="font-size:13px">年</label>
-          <select class="old_month" name="old_month">
+          <select name="old_month"
+  style="border:none; border-bottom:1px solid #345fd8ff; outline:none;
+         background:transparent; font-size:14px; width:90px;">
+            <option value="none">-----</option>
             <option value="none">-----</option>
             <option value="01">1</option>
             <option value="02">2</option>
@@ -129,7 +134,10 @@
             <option value="12">12</option>
           </select>
           <label style="font-size:13px">月</label>
-          <select class="old_day" name="old_day">
+          <select name="old_day"
+  style="border:none; border-bottom:1px solid #345fd8ff; outline:none;
+         background:transparent; font-size:14px; width:90px;">
+            <option value="none">-----</option>
             <option value="none">-----</option>
             <option value="01">1</option>
             <option value="02">2</option>

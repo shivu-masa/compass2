@@ -16,9 +16,9 @@ class CalendarWeekDay{
      $dayOfWeek = $this->carbon->dayOfWeek;
 
     if ($dayOfWeek === 0) {         // 日曜
-        return 'text-danger';       // 赤文字
+        return '';       // 赤文字
     } elseif ($dayOfWeek === 6) {   // 土曜
-        return 'text-primary';      // 青文字
+        return '';      // 青文字
     } else {                        // 平日
         return 'text-dark';         // 黒文字
     }

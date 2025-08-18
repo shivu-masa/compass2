@@ -15,7 +15,10 @@ class CalendarSettingView{
   }
 
   public function render(){
+
     $html = [];
+    $html[] = '<h4 class="text-center mb-3">' . $this->getTitle() . '</h4>';
+    $html[] = '<div class="calendar text-center border w-100 m-auto pt-5 pb-5" style="border-radius:5px; background:#FFF;">';
     $html[] = '<div class="calendar text-center">';
     $html[] = '<table class="table m-auto border adjust-table">';
     $html[] = '<thead>';
@@ -25,8 +28,8 @@ class CalendarSettingView{
     $html[] = '<th class="border">水</th>';
     $html[] = '<th class="border">木</th>';
     $html[] = '<th class="border">金</th>';
-    $html[] = '<th class="border">土</th>';
-    $html[] = '<th class="border">日</th>';
+     $html[] = '<th style="color:blue;">土</th>';  // 土曜を青
+    $html[] = '<th style="color:red;">日</th>';   // 日曜を赤
     $html[] = '</tr>';
     $html[] = '</thead>';
     $html[] = '<tbody>';

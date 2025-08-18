@@ -16261,3 +16261,880 @@ Did you mean one of these?
 #54 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
 #55 {main}
 "} 
+[2025-08-18 12:17:49] local.ERROR: Undefined variable $tdClass {"view":{"view":"C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\general\\calendar.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1131117190 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#508</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1131117190\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","calendar":"<pre class=sf-dump id=sf-dump-511750715 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Calendars\\General\\CalendarView</span> {<a class=sf-dump-ref>#512</a><samp data-depth=1 class=sf-dump-expanded>
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`App\\Calendars\\General\\CalendarView`\">carbon</span>: <span class=sf-dump-note title=\"Carbon\\Carbon @1755519468
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1755519468</span> {<a class=sf-dump-ref>#1286</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">00000000000005060000000000000000</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Monday, August 18, 2025
+- 00:00:00.954927 from now\">2025-08-18 12:17:48.0 +00:00</span>
+  </samp>}
+</samp>}
+</pre><script>Sfdump(\"sf-dump-511750715\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Undefined variable $tdClass at C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\General\\CalendarView.php:59)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined varia...', 'C:\\\\Users\\\\15ht2\\\\...', 59)
+#1 C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\General\\CalendarView.php(59): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined varia...', 'C:\\\\Users\\\\15ht2\\\\...', 59)
+#2 C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\general\\calendar.blade.php(8): App\\Calendars\\General\\CalendarView->render()
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\Users\\\\15ht2\\\\...')
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#59 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Undefined variable $tdClass at C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\General\\CalendarView.php:59)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined varia...', 'C:\\\\Users\\\\15ht2\\\\...', 59)
+#1 C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\General\\CalendarView.php(59): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined varia...', 'C:\\\\Users\\\\15ht2\\\\...', 59)
+#2 C:\\Users\\15ht2\\Documents\\compass3\\storage\\framework\\views\\dc08510c8064ca20ffe894e914d46f4928a9c4af.php(16): App\\Calendars\\General\\CalendarView->render()
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\Users\\\\15ht2\\\\...')
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#59 {main}
+"} 
+[2025-08-18 12:25:51] local.ERROR: Call to undefined method App\Calendars\Admin\CalendarView::getTitle() {"view":{"view":"C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\admin\\calendar.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-579169391 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#509</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-579169391\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","calendar":"<pre class=sf-dump id=sf-dump-1412948667 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Calendars\\Admin\\CalendarView</span> {<a class=sf-dump-ref>#513</a><samp data-depth=1 class=sf-dump-expanded>
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`App\\Calendars\\Admin\\CalendarView`\">carbon</span>: <span class=sf-dump-note title=\"Carbon\\Carbon @1755519951
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1755519951</span> {<a class=sf-dump-ref>#1287</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">00000000000005070000000000000000</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Monday, August 18, 2025
+- 00:00:00.911506 from now\">2025-08-18 12:25:51.0 +00:00</span>
+  </samp>}
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1412948667\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Call to undefined method App\\Calendars\\Admin\\CalendarView::getTitle() at C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\admin\\calendar.blade.php:4)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require()
+#1 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#2 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#56 {main}
+
+[previous exception] [object] (Error(code: 0): Call to undefined method App\\Calendars\\Admin\\CalendarView::getTitle() at C:\\Users\\15ht2\\Documents\\compass3\\storage\\framework\\views\\53ed38709b1cc953b1319f24d77a4d22be987623.php:12)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require()
+#1 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#2 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#56 {main}
+"} 
+[2025-08-18 12:26:21] local.ERROR: Unknown getter 'format' {"view":{"view":"C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\admin\\calendar.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-943177770 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#509</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-943177770\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","calendar":"<pre class=sf-dump id=sf-dump-1795776378 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Calendars\\Admin\\CalendarView</span> {<a class=sf-dump-ref>#513</a><samp data-depth=1 class=sf-dump-expanded>
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`App\\Calendars\\Admin\\CalendarView`\">carbon</span>: <span class=sf-dump-note title=\"Carbon\\Carbon @1755519981
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1755519981</span> {<a class=sf-dump-ref>#1287</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">00000000000005070000000000000000</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Monday, August 18, 2025
+- 00:00:00.420086 from now\">2025-08-18 12:26:21.0 +00:00</span>
+  </samp>}
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1795776378\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Unknown getter 'format' at C:\\Users\\15ht2\\Documents\\compass3\\vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Date.php:1079)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Date.php(822): Carbon\\Carbon->get('format')
+#1 C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\Admin\\CalendarView.php(14): Carbon\\Carbon->__get('format')
+#2 C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\calendar\\admin\\calendar.blade.php(4): App\\Calendars\\Admin\\CalendarView->getTitle()
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\Users\\\\15ht2\\\\...')
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#59 {main}
+
+[previous exception] [object] (Carbon\\Exceptions\\UnknownGetterException(code: 0): Unknown getter 'format' at C:\\Users\\15ht2\\Documents\\compass3\\vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Date.php:1079)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\nesbot\\carbon\\src\\Carbon\\Traits\\Date.php(822): Carbon\\Carbon->get('format')
+#1 C:\\Users\\15ht2\\Documents\\compass3\\app\\Calendars\\Admin\\CalendarView.php(14): Carbon\\Carbon->__get('format')
+#2 C:\\Users\\15ht2\\Documents\\compass3\\storage\\framework\\views\\53ed38709b1cc953b1319f24d77a4d22be987623.php(12): App\\Calendars\\Admin\\CalendarView->getTitle()
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\Users\\\\15ht2\\\\...')
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#59 {main}
+"} 
+[2025-08-18 12:50:18] local.ERROR: syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif" {"view":{"view":"C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\bulletinboard\\posts.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-188910810 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#512</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-188910810\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","posts":"<pre class=sf-dump id=sf-dump-1293307608 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#1532</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:2</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"App\\Models\\Posts\\Post
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Posts</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Post</span> {<a class=sf-dump-ref>#1531</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">posts</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note title=\"App\\Models\\Posts\\Post
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Posts</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Post</span> {<a class=sf-dump-ref>#1590</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">posts</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1293307608\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","categories":"<pre class=sf-dump id=sf-dump-71163832 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#1541</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"App\\Models\\Categories\\MainCategory
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Categories</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>MainCategory</span> {<a class=sf-dump-ref>#1544</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"15 characters\">main_categories</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note title=\"App\\Models\\Categories\\MainCategory
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Categories</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>MainCategory</span> {<a class=sf-dump-ref>#1552</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"15 characters\">main_categories</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>2</span> => <span class=sf-dump-note title=\"App\\Models\\Categories\\MainCategory
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Categories</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>MainCategory</span> {<a class=sf-dump-ref>#1551</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"15 characters\">main_categories</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>3</span> => <span class=sf-dump-note title=\"App\\Models\\Categories\\MainCategory
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models\\Categories</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>MainCategory</span> {<a class=sf-dump-ref>#1550</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"15 characters\">main_categories</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-71163832\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","like":"<pre class=sf-dump id=sf-dump-1500947672 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Posts\\Like</span> {<a class=sf-dump-ref>#1559</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>false</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:2</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"12 characters\">like_user_id</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"12 characters\">like_post_id</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1500947672\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","post_comment":"<pre class=sf-dump id=sf-dump-1613148337 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Posts\\Post</span> {<a class=sf-dump-ref>#1555</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>false</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"7 characters\">user_id</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"10 characters\">post_title</span>\"
+    <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"4 characters\">post</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1613148337\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":3,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): syntax error, unexpected token \"endforeach\", expecting \"elseif\" or \"else\" or \"endif\" at C:\\Users\\15ht2\\Documents\\compass3\\resources\\views\\authenticated\\bulletinboard\\posts.blade.php:120)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#2 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#55 {main}
+
+[previous exception] [object] (ParseError(code: 0): syntax error, unexpected token \"endforeach\", expecting \"elseif\" or \"else\" or \"endif\" at C:\\Users\\15ht2\\Documents\\compass3\\storage\\framework\\views\\44fdb99f6dc267f2781e3e98a74f01b44c029194.php:129)
+[stacktrace]
+#0 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\15ht2\\\\...', Array)
+#2 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(70): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\15ht2\\\\...', Array)
+#3 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\15ht2\\\\...', Array)
+#4 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#5 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#6 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#7 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#8 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(906): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#9 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(875): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#10 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#24 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 C:\\Users\\15ht2\\Documents\\compass3\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\15ht2\\Documents\\compass3\\public\\index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\15ht2\\Documents\\compass3\\server.php(21): require_once('C:\\\\Users\\\\15ht2\\\\...')
+#55 {main}
+"} 

@@ -80,6 +80,7 @@
     <style>
   .category-toggle {
     cursor: pointer;
+     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,25 +88,42 @@
 </style>
 
 <div class="category-list">
-  <ul class="list-unstyled">
-    @foreach($categories as $index => $main_category)
-      <li class="fw-bold text-secondary category-toggle" data-target="subcat-{{ $index }}">
-        <span>{{ $main_category->main_category }}</span>
-        <span class="arrow">▲</span> {{-- 初期は閉じているので上向き --}}
-      </li>
-      <ul class="ms-3 mb-3 sub-category-list" id="subcat-{{ $index }}">
-        @foreach($main_category->subCategories as $sub_category)
-          <li>
-            <a href="{{ route('post.show') }}?sub_category_id={{ $sub_category->id }}" class="text-decoration-none">
-              {{ $sub_category->sub_category }}
-            </a>
-          </li>
-        @endforeach
+  <style>
+    .sub-category-list a {
+      font-size: 0.85rem;
+    }
+    .sub-category-list li {
+      font-size: 0.85rem;
+    }
+  </style>
 
-      </ul>
+<ul class="list-unstyled">
+  @foreach($categories as $index => $main_category)
+    {{-- メインカテゴリー --}}
+    <li class="fw-bold text-secondary category-toggle" data-target="subcat-{{ $index }}" style="font-size:16px;">
+      <span>{{ $main_category->main_category }}</span>
+      <span class="arrow">▲</span>
+    </li>
+    {{-- メインカテゴリーとサブカテゴリーの間に余白付き区切り線 --}}
+    <hr style="margin: 8px 0 12px 0; border: 0; border-top: 1px solid #ccc; width: 100%;">
 
-    @endforeach
-  </ul>
+    {{-- サブカテゴリー --}}
+    <ul class="ms-3 mb-3 sub-category-list" id="subcat-{{ $index }}" style="margin-left:20px; margin-top:10px;">
+  @foreach($main_category->subCategories as $sub_category)
+    <li>
+      <a href="{{ route('post.show') }}?sub_category_id={{ $sub_category->id }}"
+         class="text-decoration-none"
+         style="font-size:14px; color:#6c757d;">
+        {{ $sub_category->sub_category }}
+      </a>
+    </li>
+    <hr style="margin: 3px 0; border: 0; border-top: 1px solid #ccc; width: 80%; margin-left:0;">
+  @endforeach
+</ul>
+  @endforeach
+</ul>
+
+
 </div>
 
 
